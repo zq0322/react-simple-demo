@@ -13,8 +13,7 @@ const BodyParserMiddleware = bodyParser.json();
 const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
 const host = process.env.HOST || '0.0.0.0';
 const axios = require("axios");
-const {login,regsitry,saveToken,getToken} = require("./sql");
-const md5 = require("md5");
+
 
 module.exports = function(proxy, allowedHost) {
     return {
